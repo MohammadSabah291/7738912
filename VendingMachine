@@ -1,1 +1,25 @@
 #include <stdio.h>
+
+
+// Constants for the Vending Machine prices and minimum quantity alert
+int Min=5;
+float itemPriceA = 1.5;
+float itemPriceB=2.0;
+float ItemPriceC=2.5;
+
+// Passwords for the admin and also the quantity for the items
+int password= 1234;
+float total_amount=0;
+int quantityA= 10;
+int quantityB= 10;
+int quantityC= 10;
+
+
+// Function Prototypes for the Vending Machine
+void itemPurchase();
+void adminMode ():
+
+int main() {
+    int choice;
+
+    
