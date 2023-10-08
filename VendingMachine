@@ -5,7 +5,7 @@
 int Min=5;
 float itemPriceA = 1.5;
 float itemPriceB=2.0;
-float ItemPriceC=2.5;
+float itemPriceC=2.5;
 
 // Passwords for the admin and also the quantity for the items
 int password= 1234;
@@ -17,9 +17,98 @@ int quantityC= 10;
 
 // Function Prototypes for the Vending Machine
 void itemPurchase();
-void adminMode ():
+void adminMode ();
 
 int main() {
     int choice;
+
+    while(1) {
+        printf("Welcome to the Vending Machine\t\n");
+        printf("1) Purchase the item for the consumer\t\n");
+        printf("2) Admin mode for the vending machine\t\n");
+        printf("3) Exit\t\n");
+        printf("Enter your choice number: ");
+        scanf("%i",&choice);
+
+        switch(choice) {
+            case 1:
+                 itemPurchase();
+                 break;
+            case 2:
+                adminMode();
+                break;
+            case 3:
+                 printf("Exiting the program. Thank you.\n");
+                 return 0;
+            default:
+                printf("Choice invalid. Please try again.\n");            
+        }
+    }
+}
+
+
+void itemPurchase(){
+    printf("Items Available:\n");
+    printf("1) Item A ~ Price: %.2f\n", itemPriceA);
+    printf("2) Item b ~ Price: %.2f\n", itemPriceB);
+    printf("3) Item c ~ Price: %.2f\n", itemPriceC);
+    printf("0) Cancel the operation\n");
+
+    int choiceItem;
+    float fils;
+
+    while (1) {
+        printf("Enter your selection: /n ");
+        scanf("%i", &choiceItem);
+
+        if(choiceItem == 0) {
+            printf("Purchase canceled.\n");
+            return;
+        }
+
+        float itemPrice = 0;
+        int *quantity;
+
+        switch (choiceItem) {
+            case 1:
+                itemPrice = itemPriceA;
+                quantity = &quantityA;
+                break;
+            case 2:
+                itemPrice = itemPriceB;
+                quantity = &quantityB;
+                break;
+            case 3:
+                itemPrice = itemPriceC;
+                quantity = &quantityC;
+                break;
+            default:
+                printf("Invalid item choice. Please try again.\t\n");
+                continue;    
+        }
+    } 
+    
+    
+printf("You selected item %c wiht a price of %.2f. Confirm? (Y/N): \n");
+char confirmation;
+scanf(" %c", &confirmation);
+
+if (confirmation != 'Y' && confirmation != 'y') {
+    printf("Purchase canceled.\n");
+    return;
+}
+
+
+float paidAmount = 0
+    
+
+
+
+
+}
+
+    
+
+    
 
     
