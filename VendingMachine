@@ -101,17 +101,22 @@ if (confirmation != 'Y' && confirmation != 'y') {
 
 float paidAmount = 0
 while (paidAmount < itemPrice) {
-    printf("Please insert a fils (0.25, 0.50, 1.00): ");
-    scanf("%f", &fils);
+    printf("Please insert a dirhams (0.25, 0.50, 1.00): ");
+    scanf("%f", &dirhams);
 
     if (fils != 0.25 && fils != 0.50 && fils != 1.00) {
-        printf("Invalid fils. Try again or cancel the purchase.\n");
+        printf("Invalid dirhams. Try again or cancel the purchase.\n");
         char cancel;
         printf("Cancel the purchase? (Y/N): \n");
         scanf("%c", &cancel);
 
-        if (cancel == 'Y' || cancel == 'y') {}
+        if (cancel == 'Y' || cancel == 'y') {
+            printf("Purchase canceled. \n");
+            return;
+        }
 
+    } else {
+        paidAmount 
     }
 }
     
