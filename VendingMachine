@@ -123,7 +123,12 @@ while (paidAmount < itemPrice) {
 *quantity -= 1;
 total_amount += itemPrice;
 
+printf("You have purchased item %c for %.2f. Paid: %.2f. Change: %.2f\n", 'A' + choiceItem - 1, itemPrice, paidAmount, paidAmount - itemPrice);
 
+if (*quantity <= Min) {
+    printf("Alert: The quantity of the item %c is low! \n", 'A' + choiceItem - 1);
+}
+return;
 
 
 
