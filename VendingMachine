@@ -67,7 +67,7 @@ void itemPurchase(){
         }
 
         float itemPrice = 0;
-        int*  quantity;
+        int   *quantity;
 
         switch (choiceItem) {
             case 1:
@@ -116,10 +116,13 @@ while (paidAmount < itemPrice) {
         }
 
     } else {
-        paidAmount 
+        paidAmount += dirhams;
     }
 }
     
+*quantity -= 1;
+total_amount += itemPrice;
+
 
 
 
