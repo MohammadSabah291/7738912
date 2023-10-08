@@ -55,10 +55,10 @@ void itemPurchase(){
     printf("0) Cancel the operation\n");
 
     int choiceItem;
-    float fils;
+    float dirhams;
 
     while (1) {
-        printf("Enter your selection: /n ");
+        printf("Enter your selection: \n ");
         scanf("%i", &choiceItem);
 
         if(choiceItem == 0) {
@@ -67,7 +67,7 @@ void itemPurchase(){
         }
 
         float itemPrice = 0;
-        int *quantity;
+        int*  quantity;
 
         switch (choiceItem) {
             case 1:
@@ -89,7 +89,7 @@ void itemPurchase(){
     } 
     
     
-printf("You selected item %c wiht a price of %.2f. Confirm? (Y/N): \n");
+printf("You selected item %c with a price of %.2f. Confirm? (Y/N): \n",);
 char confirmation;
 scanf(" %c", &confirmation);
 
@@ -107,10 +107,10 @@ while (paidAmount < itemPrice) {
     if (fils != 0.25 && fils != 0.50 && fils != 1.00) {
         printf("Invalid fils. Try again or cancel the purchase.\n");
         char cancel;
-        printf("Cancel the purchase? (Y/N): /n");
+        printf("Cancel the purchase? (Y/N): \n");
         scanf("%c", &cancel);
 
-        if ()
+        if (cancel == 'Y' || cancel == 'y') {}
 
     }
 }
