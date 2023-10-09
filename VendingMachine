@@ -132,6 +132,33 @@ return;
 
 }
 
+void adminMode() {
+    int adminPassword;
+    printf("\nPlease enter the admin password: ");
+    scanf("%i", &adminPassword);
+
+    if (adminPassword != password) {
+        printf("Incorrect password. Exiting admin mode.\n");
+        return;
+    }
+    
+    int choice;
+
+    while (1) {
+        printf("\n Admin mode: \n");
+        printf("1) Replenish Items \n");
+        printf("2) Change Item Prices \n");
+        printf("3) Display Total Sale \n");
+        printf("4) Display Item Availability \n");
+        printf("0) Exit Admin Mode \n");
+        printf(" Enter your choice: ");
+        scanf("%i", &choice);
+    
+    
+    }
+}
+
+
     
 
     
