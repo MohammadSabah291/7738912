@@ -153,7 +153,49 @@ void adminMode() {
         printf("0) Exit Admin Mode \n");
         printf(" Enter your choice: ");
         scanf("%i", &choice);
+
+
+        switch (choice)
+        {
+        case 1:
+            quantityA = rand() % 20 + 1;
+            quantityB = rand() % 20 + 1;
+            quantityC = rand() % 20 + 1;
+            printf("Items replenished.\n");
+            break;
+        case 2:
+            printf("Enter a new price for item A: ");
+            scanf("%f", &itemPriceA);
+            printf("Enter a new price for item B: ");
+            scanf("%f", &itemPriceB);
+            printf("Enter a new price for item C: ");
+            scanf("%f", &itemPriceC);
+            printf("Prices are updated.\n");
+            break;
+        case 3:
+            printf("Total sale amount : .%2f\n", total_amount);
+            char choiceReset;
+            printf(" Reset total salle amount? (Y/N): ");
+            scanf("%c", &choiceReset);
+            
+            if (choiceReset == 'Y' || choiceReset == 'y') {
+                total_amount = 0;
+                printf("The total sale amount reset to zero. Collect the money from the machine.\n");
+            }
+            break;
+        case 4:
+             printf("Item A: Quantity %i\n", quantityA);
+             printf("Item B: Quantity %i\n", quantityB);
+             printf("Item C: Quantity %i\n", quantityC);
+             break;
+        case 5:
+            printf("Exiting the admin mode. \n");
+            return;     
     
-    
+        default:
+            printf("Invalid Choice. Please try again.\n");
+            
+
+        }
     }
 }
