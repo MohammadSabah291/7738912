@@ -66,8 +66,8 @@ void itemPurchase(){
             return;
         }
 
-        float itemPrice = 0;
-        int   *quantity;
+        float itemPrice;
+        int *quantity;
 
         switch (choiceItem) {
             case 1:
@@ -86,10 +86,8 @@ void itemPurchase(){
                 printf("Invalid item choice. Please try again.\t\n");
                 continue;    
         }
-    } 
-    
-    
-printf("You selected item %c with a price of %.2f. Confirm? (Y/N): \n",);
+     
+    printf("You selected item %c with a price of %.2f. Confirm? (Y/N): \n",'A' + choiceItem - 1, itemPrice);
 char confirmation;
 scanf(" %c", &confirmation);
 
@@ -99,12 +97,12 @@ if (confirmation != 'Y' && confirmation != 'y') {
 }
 
 
-float paidAmount = 0
+float paidAmount = 0;
 while (paidAmount < itemPrice) {
     printf("Please insert a dirhams (0.25, 0.50, 1.00): ");
     scanf("%f", &dirhams);
 
-    if (fils != 0.25 && fils != 0.50 && fils != 1.00) {
+    if (dirhams != 0.25 && dirhams != 0.50 && dirhams != 1.00) {
         printf("Invalid dirhams. Try again or cancel the purchase.\n");
         char cancel;
         printf("Cancel the purchase? (Y/N): \n");
@@ -119,6 +117,7 @@ while (paidAmount < itemPrice) {
         paidAmount += dirhams;
     }
 }
+
     
 *quantity -= 1;
 total_amount += itemPrice;
@@ -130,6 +129,7 @@ if (*quantity <= Min) {
 }
 return;
 
+}
 }
 
 void adminMode() {
@@ -157,10 +157,3 @@ void adminMode() {
     
     }
 }
-
-
-    
-
-    
-
-    
