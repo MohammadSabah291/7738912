@@ -99,7 +99,7 @@ if (confirmation != 'Y' && confirmation != 'y') {
 
 float paidAmount = 0;
 while (paidAmount < itemPrice) {
-    printf("Please insert a dirhams (0.25, 0.50, 1.00): ");
+    printf("Please insert dirhams (0.25, 0.50, 1.00): ");
     scanf("%f", &dirhams);
 
     if (dirhams != 0.25 && dirhams != 0.50 && dirhams != 1.00) {
