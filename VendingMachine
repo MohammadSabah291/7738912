@@ -188,7 +188,7 @@ void adminMode() {
              printf("Item B: Quantity %i\n", quantityB);
              printf("Item C: Quantity %i\n", quantityC);
              break;
-        case 5:
+        case 0:
             printf("Exiting the admin mode. \n");
             return;     
     
