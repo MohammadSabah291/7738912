@@ -175,7 +175,7 @@ void adminMode() {
         case 3:
             printf("Total sale amount : .%2f\n", total_amount);
             char choiceReset;
-            printf(" Reset total salle amount? (Y/N): ");
+            printf(" Reset total sale amount? (Y/N): ");
             scanf("%c", &choiceReset);
             
             if (choiceReset == 'Y' || choiceReset == 'y') {
