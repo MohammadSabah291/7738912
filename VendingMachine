@@ -173,10 +173,10 @@ void adminMode() {
             printf("Prices are updated.\n");
             break;
         case 3:
-            printf("Total sale amount : .%2f\n", total_amount);
+            printf("Total sale amount : %,2f\n", total_amount);
             char choiceReset;
             printf(" Reset total sale amount? (Y/N): ");
-            scanf("%c", &choiceReset);
+            scanf(" %c", &choiceReset);
             
             if (choiceReset == 'Y' || choiceReset == 'y') {
                 total_amount = 0;
